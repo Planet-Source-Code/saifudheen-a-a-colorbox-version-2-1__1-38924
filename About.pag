@@ -1,0 +1,64 @@
+VERSION 5.00
+Begin VB.PropertyPage About 
+   Caption         =   "About"
+   ClientHeight    =   3495
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   5925
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   12
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   233
+   ScaleMode       =   3  'Pixel
+   ScaleWidth      =   395
+   Begin VB.Line Line2 
+      BorderColor     =   &H80000015&
+      X1              =   0
+      X2              =   398
+      Y1              =   192
+      Y2              =   192
+   End
+   Begin VB.Line Line1 
+      BorderColor     =   &H80000016&
+      X1              =   0
+      X2              =   396
+      Y1              =   190
+      Y2              =   190
+   End
+End
+Attribute VB_Name = "About"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+
+Private Sub PropertyPage_Paint()
+    With PropertyPage
+    .ForeColor = vbBlue
+    .CurrentX = 50
+    .CurrentY = 60
+    .FontSize = 10
+    PropertyPage.Print "ColorBox ver 2.1"
+    PropertyPage.Print
+    .CurrentX = 50
+    PropertyPage.Print "Copyright © SaifSoft inc."
+    
+    
+    PropertyPage.Print
+    .FontSize = 8
+    .CurrentX = 50
+    PropertyPage.Print "Author: Saifudheen. A. A. "
+    .CurrentX = 50
+    PropertyPage.Print "keraleeyan@msn.com"
+    .CurrentX = 50
+    PropertyPage.Print "www.saifu.5u.com"
+    End With
+End Sub
+
